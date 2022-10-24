@@ -2,7 +2,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-weight: 300;
-    /* outline: 3px solid red; */
 }
 
 html, body {
@@ -29,7 +28,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 15vh;
-    outline: solid pink 2px;
 
 }
 
@@ -37,14 +35,12 @@ header h1 {
     font-size: xxx-large;
     font-style: italic;
     color: var(--color-primary);
-    outline: solid yellow 2px;
 }
 
 
 
 /* CONTENT */
 #content {
-    outline: solid purple 3px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-evenly;
@@ -64,10 +60,21 @@ header h1 {
 /* SETTINGS */
 #settings {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     height: 40vh;
     width: 50%;
     max-width: 200px;
     outline: groove var(--color-primary) 3px;
+    background-color: var(--color-primary);
+}
+
+.button { 
+    width: 50%;
+    height: 15%;
+    outline: groove 2px var(--color-primary);
+    background-color: var(--color-secondary);
 }
 
 
@@ -75,8 +82,8 @@ header h1 {
 #grid {
     outline: 3px groove var(--color-primary);
     display: grid;
-    width: 500px;
-    height: 500px;
+    width: 250px;
+    height: 250px;
 }
 
 #grid:after {
@@ -93,4 +100,18 @@ header h1 {
 
 .grid-pixel-lines {
     outline: dashed black 1px;
+}
+
+@media only screen and (min-width: 600px) {
+    #grid {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #grid {
+        width: 500px;
+        height: 500px;
+    }
 }
